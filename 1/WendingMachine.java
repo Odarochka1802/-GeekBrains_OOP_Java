@@ -107,3 +107,4 @@ public class WendingMachine {
         } else System.out.println("Неверно введена команда");
     }
 }
+
