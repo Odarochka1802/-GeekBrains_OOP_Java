@@ -21,7 +21,7 @@ public class Main {
         boolean flag = true;
         while(flag){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Выберите действие: 1. Купить 2. Внести позицию 3. Вывести на экран список товаров 4. Найти товар 5. Выйти");
+        System.out.println("Выберите действие: 1. Купить 2. Внести позицию 3. Вывести на экран список товаров 4. Найти товар 5. Вывести сумму на экран 6. Выйти");
         String command = sc.nextLine();
 
         if (command.equals("1")) {
@@ -35,7 +35,9 @@ public class Main {
             System.out.println("Введите название для поиска: ");
             String name = sc.nextLine();
             System.out.println(store.findProduct(name));
-        } else if ((command.equals("5"))){
+        }else if (command.equals("5")) {
+            System.out.println("Сумма: " + store.getMoney());
+        }else if ((command.equals("6"))){
             flag= false;
             System.out.println("Выход");}
         else System.out.println("Не верно введена команда ");
